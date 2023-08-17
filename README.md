@@ -9,7 +9,7 @@ Este é um utilitário simples desenvolvido em C# para verificar o número de se
 
 2. **Clone o Repositório:**
    Clone este repositório para a sua máquina usando o seguinte comando:
-  git clone https://github.com/limaum87/check_rdp/
+   https://github.com/limaum87/check_rdp.git
    
 4. **Navegue para a Pasta:**
 Use o terminal para navegar até a pasta do projeto:
