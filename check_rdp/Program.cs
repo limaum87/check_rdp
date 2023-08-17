@@ -26,25 +26,26 @@ namespace check_rdp
             int numberOfSessions = CountRdpSessions(output);
 
             string statusMessage;
-            string nagiosOutput;
+            int nagiosOutput;
 
             if (numberOfSessions == 1)
             {
                 statusMessage = "WARN! Número de sessões RDP: " + numberOfSessions;
-                nagiosOutput = "1";
+                nagiosOutput = 1;
             }
             else if (numberOfSessions > 1)
             {
-                statusMessage = "OK! Número de sessões RDP: " + numberOfSessions;
-                nagiosOutput = numberOfSessions.ToString();
+                statusMessage = "OK! Número de sessões RDP: " + numberOfSessions ;
+                nagiosOutput = 0;
             }
             else
             {
                 statusMessage = "Critical! Número de sessões RDP: " + numberOfSessions;
-                nagiosOutput = "2";
+                nagiosOutput = 2;
             }
 
-            Console.WriteLine(statusMessage + " |sessoes=" + nagiosOutput);
+            Console.WriteLine(statusMessage + " |sessoes=" + numberOfSessions);
+            Environment.Exit(nagiosOutput);
         }
 
         static int CountRdpSessions(string output)
