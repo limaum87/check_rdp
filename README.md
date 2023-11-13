@@ -1,32 +1,31 @@
 # RDP Session Checker
 
-Este é um utilitário simples desenvolvido em C# para verificar o número de sessões ativas da Área de Trabalho Remota (RDP) em um servidor.
+This is a simple utility developed in C# to check the number of active Remote Desktop (RDP) sessions on a server.
 
-## Como Usar
+## How To Use
 
-1. **Pré-requisitos:**
-   - Certifique-se de ter o .NET Core SDK instalado em sua máquina. Você pode baixá-lo em https://dotnet.microsoft.com/download.
+1. **Prerequisites:**
+   - Make sure you have the .NET Core SDK installed on your machine. You can download it at https://dotnet.microsoft.com/download.
 
-2. **Clone o Repositório:**
-   Clone este repositório para a sua máquina usando o seguinte comando:
-   https://github.com/limaum87/check_rdp.git
+2. **Clone the Repository:**
+   Clone this repository to your machine using the following command: https://github.com/limaum87/check_rdp.git
    
-4. **Navegue para a Pasta:**
-Use o terminal para navegar até a pasta do projeto:
+4. **Navigate to the Folder:**
+ Use the terminal to navigate to the project folder:
 
-5. **Execute o Programa:**
-Execute o seguinte comando para compilar e executar o programa:
+5. **Run the Program:*
+Compile the project with Visual Studio.
 
-6. **Resultados:**
-- O programa exibirá uma mensagem informando o número de sessões RDP.
-- Se houver 1 sessão, a mensagem será "WARN! Número de sessões RDP: 1".
-- Se houver mais de 1 sessão, a mensagem será "OK! Número de sessões RDP: [número]".
-- Se não houver sessões, a mensagem será "Critical! Número de sessões RDP: 0".
+6. **Results:**
+The program will display a message indicating the number of RDP sessions.
+ - If there is 1 session, the message will be "WARN! Number of RDP sessions: 1".
+ - If there is more than 1 session, the message will be "OK! Number of RDP sessions: [number]".
+ - If there are no sessions, the message will be "Critical! Number of RDP sessions: 0".
 
 ## Personalização
 
-- No arquivo `Program.cs`, você pode modificar a parte que define a variável `process.StartInfo.Arguments` para especificar o nome ou endereço do servidor RDP que deseja verificar.
+- In the Program.cs file, you can modify the part that sets the variable process.StartInfo.Arguments to specify the name or address of the RDP server you want to check.
 
 ## Licença
 
-Este projeto é licenciado sob a Licença [MIT](LICENSE).
+This project is licensed under the MIT License. [MIT](LICENSE).
