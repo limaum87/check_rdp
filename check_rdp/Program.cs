@@ -14,7 +14,7 @@ namespace check_rdp
         {
             Process process = new Process();
             process.StartInfo.FileName = "qwinsta";
-            process.StartInfo.Arguments = "/server:localhost"; // Substitua "localhost" pelo nome ou endereço do servidor RDP
+            process.StartInfo.Arguments = "/server:localhost"; 
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.CreateNoWindow = true;
@@ -30,17 +30,17 @@ namespace check_rdp
 
             if (numberOfSessions == 1)
             {
-                statusMessage = "WARN! Número de sessões RDP: " + numberOfSessions;
+                statusMessage = "WARN! Number of RDP sessions: " + numberOfSessions;
                 nagiosOutput = 1;
             }
             else if (numberOfSessions > 1)
             {
-                statusMessage = "OK! Número de sessões RDP: " + numberOfSessions ;
+                statusMessage = "OK! Number of RDP sessions: " + numberOfSessions ;
                 nagiosOutput = 0;
             }
             else
             {
-                statusMessage = "Critical! Número de sessões RDP: " + numberOfSessions;
+                statusMessage = "Critical! Number of RDP sessions: " + numberOfSessions;
                 nagiosOutput = 2;
             }
 
